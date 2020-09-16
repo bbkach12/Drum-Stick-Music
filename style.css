@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  transition: background-color 1s;
+}
+
+.app {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  padding-bottom: 10px;
+  border-bottom: 3px solid black;
+  margin: 50px 0px 30px 0px;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 500;
+}
+
+header p {
+  font-size: 20px;
+}
+
+.pads {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.pads > div {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  /* flex: 0 1 100px; */
+  margin: 10px auto;
+}
+
+.pad1 {
+  box-shadow: 5px 5px 1px 0 rgb(29, 28, 28);
+  transition: transform 1s ease;
+  background: #df1709;
+}
+.pad2 {
+  box-shadow: 5px 5px 1px 0 rgb(29, 28, 28);
+  transition: transform 1s ease;
+  background: #e9db13;
+}
+.pad3 {
+  box-shadow: 5px 5px 1px 0 rgb(29, 28, 28);
+  transition: transform 1s ease;
+  background: #13db13;
+}
+.pad4 {
+  box-shadow: 5px 5px 1px 0 rgb(29, 28, 28);
+  transition: transform 1s ease;
+  background: #0ccebe;
+}
+.pad5 {
+  box-shadow: 5px 5px 1px 0 rgb(29, 28, 28);
+  transition: transform 1s ease;
+  background: #155bac;
+}
+.pad6 {
+  box-shadow: 5px 5px 1px 0 rgb(29, 28, 28);
+  transition: transform 1s ease;
+  background: #d00ed6;
+}
+.pad1:hover,
+.pad2:hover,
+.pad3:hover,
+.pad4:hover,
+.pad5:hover,
+.pad6:hover {
+  /* transform: scale(0.8); */
+}
+
+@keyframes jump {
+  0% {
+    transform: scale(0);
+    bottom: 0%;
+    left: 20%;
+  }
+  50% {
+    bottom: 50%;
+    left: 50%;
+    transform: scale(5);
+  }
+  100% {
+    bottom: 0%;
+    left: 80%;
+    transform: scale(0);
+  }
+}
+
+.visual > div {
+  display: none;
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  bottom: 0%;
+  left: 20%;
+  z-index: -1;
+  transform: scale(1);
+  transition: transform 2s ease;
+  background: #fff;
+  box-shadow: 5px 5px 10px 0 rgb(145, 142, 142);
+}
